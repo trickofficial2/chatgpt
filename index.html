@@ -1,171 +1,70 @@
 <!doctype html>
 <html lang="bn">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<title>Telegram Growth Guide — সহজ কনটেন্ট রুটিন</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff"><title>Telegram Content Lab — Idea Bank & Post Examples</title>
 <style>
-:root{
-  --bg:#f7f9fc;--card:#ffffff;--text:#182230;--muted:#667085;--soft:#f1f5f9;
-  --line:#e6eaf0;--blue:#229ed9;--blue2:#0f83bd;--green:#16a34a;--orange:#f59e0b;
-  --shadow:0 6px 24px rgba(16,24,40,.06);--radius:18px
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Bengali","Noto Sans",sans-serif;line-height:1.7}
-button,input{font:inherit}
-.wrap{max-width:980px;margin:auto;padding:18px 15px 55px}
-.hero{background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px 22px;margin-bottom:18px;box-shadow:var(--shadow)}
-.hero-top{display:flex;gap:14px;align-items:flex-start}
-.logo{width:48px;height:48px;border-radius:15px;background:#eaf7fd;display:grid;place-items:center;font-size:25px;flex:none}
-.hero h1{font-size:clamp(25px,5vw,36px);line-height:1.25;margin:0 0 5px;letter-spacing:-.5px}
-.hero p{margin:0;color:var(--muted);font-size:15px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
-.stat{background:var(--soft);border-radius:14px;padding:12px 13px}.stat span{display:block;color:var(--muted);font-size:12px}.stat b{font-size:21px;line-height:1.3}
-.layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(250px,.75fr);gap:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-bottom:18px;box-shadow:var(--shadow)}
-.card h2{font-size:20px;line-height:1.35;margin:0 0 6px}.intro{color:var(--muted);font-size:14px;margin:0 0 15px}
-.row{display:flex;justify-content:space-between;align-items:center;gap:10px}
-button{border:0;border-radius:10px;padding:8px 12px;background:var(--blue);color:#fff;font-weight:700;cursor:pointer}button.secondary{background:#eef2f6;color:#344054}
-.task{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}
-.task input{width:20px;height:20px;margin-top:5px;accent-color:var(--blue);flex:none}.task label{cursor:pointer;flex:1}.task input:checked+label{text-decoration:line-through;color:var(--muted)}
-.badge{display:inline-block;padding:3px 9px;border-radius:999px;background:#eaf7fd;color:#0875a8;font-size:12px;font-weight:700;margin-bottom:3px}
-.progress-wrap{margin-top:16px}.progress-label{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:6px}.progress{height:9px;background:#e9edf3;border-radius:999px;overflow:hidden}.bar{height:100%;width:0;background:var(--blue);transition:.25s}
-.plan{display:grid;gap:9px}.day{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:12px}.day-no{width:30px;height:30px;border-radius:10px;background:#eaf7fd;color:#0875a8;display:grid;place-items:center;font-weight:800;flex:none}.day b{display:block;line-height:1.35}.day span{color:var(--muted);font-size:13px}
-.category-list{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 2px}.category{border:1px solid #dbeaf2;background:#f8fcfe;color:#176b8e;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700}
-.steps{display:grid;gap:10px}.step{display:flex;gap:12px;align-items:flex-start}.num{width:29px;height:29px;border-radius:9px;background:#f1f5f9;display:grid;place-items:center;font-weight:800;flex:none}
-.example{background:#f8fafc;border:1px dashed #d7dde5;border-radius:14px;padding:14px;margin-top:12px;font-size:14px}.example strong{display:block;margin-bottom:5px}
-.ideas{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.idea{border:1px solid var(--line);border-radius:12px;padding:10px 11px;font-size:13px;background:#fff}
-.tip{border-left:4px solid var(--blue);background:#f7fbfd;padding:12px 13px;border-radius:0 12px 12px 0;color:#344054;font-size:14px}
-.money li,.safe li{margin:7px 0}.money li::marker{color:var(--green)}.safe li::marker{color:var(--orange)}
-.check-title{display:flex;align-items:center;gap:8px}.check-title span{font-size:20px}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:8px}
-.sticky-nav{position:sticky;top:0;z-index:5;background:rgba(247,249,252,.94);backdrop-filter:blur(8px);padding:7px 0;margin:-7px 0 13px}
-.nav{display:flex;gap:7px;overflow:auto;padding-bottom:2px}.nav a{white-space:nowrap;text-decoration:none;color:#475467;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12px}.nav a:hover{border-color:#b9ddec;color:#0875a8}
-@media(max-width:760px){.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}.ideas{grid-template-columns:1fr}.card{padding:16px}.hero{padding:21px 17px}.hero-top{gap:10px}.logo{width:43px;height:43px;border-radius:13px}.stat{padding:10px}.stat b{font-size:18px}.wrap{padding-left:12px;padding-right:12px}}
-@media(max-width:390px){.stats{gap:7px}.stat span{font-size:11px}.stat b{font-size:16px}}
+:root{--bg:#f6f8fb;--card:#fff;--text:#172033;--muted:#667085;--line:#e5e9f0;--blue:#229ed9;--blue2:#087db6;--soft:#eef8fc;--green:#16a34a;--gold:#f59e0b;--shadow:0 8px 28px rgba(16,24,40,.07);--r:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Bengali","Noto Sans",sans-serif;line-height:1.7}.wrap{max-width:1100px;margin:auto;padding:12px 14px 60px}
+.nav{position:sticky;top:0;z-index:20;background:rgba(246,248,251,.95);backdrop-filter:blur(10px);padding:8px 0 12px;display:flex;gap:7px;overflow:auto}.nav a{white-space:nowrap;text-decoration:none;color:#475467;background:#fff;border:1px solid var(--line);padding:6px 11px;border-radius:999px;font-size:12px}.nav a:hover{color:var(--blue2);border-color:#b9ddec}
+.hero{background:linear-gradient(135deg,#fff,#f1faff);border:1px solid var(--line);border-radius:24px;padding:28px 23px;box-shadow:var(--shadow);margin-bottom:18px}.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:20px;align-items:center}.hero h1{font-size:clamp(28px,5vw,43px);line-height:1.2;margin:0 0 8px}.hero p{margin:0;color:var(--muted);font-size:15px}.hero-badge{display:inline-block;background:var(--soft);color:var(--blue2);font-weight:800;border-radius:999px;padding:5px 11px;font-size:12px;margin-bottom:9px}.hero-art{background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 5px 20px rgba(16,24,40,.05)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:20px}.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}.stat span{display:block;color:var(--muted);font-size:11px}.stat b{font-size:20px}
+.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(260px,.7fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin-bottom:18px;box-shadow:var(--shadow)}.card h2{margin:0 0 5px;font-size:21px;line-height:1.35}.intro{color:var(--muted);font-size:14px;margin:0 0 15px}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}button{border:0;border-radius:10px;padding:9px 12px;background:var(--blue);color:#fff;font-weight:800;cursor:pointer}button.secondary{background:#eef2f6;color:#344054}
+.tasks{display:grid;gap:4px}.task{display:flex;gap:11px;padding:10px 0;border-bottom:1px solid var(--line)}.task:last-child{border:0}.task input{width:19px;height:19px;margin-top:5px;accent-color:var(--blue)}.task label{flex:1;cursor:pointer}.task input:checked+label{text-decoration:line-through;color:var(--muted)}.badge{font-size:11px;background:var(--soft);color:var(--blue2);border-radius:999px;padding:2px 8px;font-weight:800}
+.progress{height:9px;background:#e9edf3;border-radius:999px;overflow:hidden;margin-top:8px}.bar{height:100%;width:0;background:var(--blue);transition:.25s}.progress-label{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:15px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}.chip{border:1px solid #d7eaf2;background:#f8fcfe;color:#176b8e;padding:5px 10px;border-radius:999px;font-size:12px;font-weight:800}.plan{display:grid;gap:9px;margin-top:13px}.day{display:flex;gap:12px;border:1px solid var(--line);border-radius:14px;padding:12px}.day-no{width:31px;height:31px;display:grid;place-items:center;background:var(--soft);color:var(--blue2);border-radius:10px;font-weight:900;flex:none}.day b{display:block}.day span{font-size:13px;color:var(--muted)}
+.section-title{display:flex;align-items:flex-start;gap:10px}.section-icon{width:38px;height:38px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:20px;flex:none}.filter{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}.filter button{background:#f2f4f7;color:#475467;font-size:12px;padding:7px 10px}.filter button.active{background:var(--blue);color:#fff}.idea-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.idea{border:1px solid var(--line);border-radius:13px;padding:11px;background:#fff}.idea b{display:block;font-size:14px}.idea small{color:var(--muted);font-size:12px}.tag{display:inline-block;margin-top:7px;font-size:10px;font-weight:800;color:var(--blue2);background:var(--soft);border-radius:999px;padding:2px 7px}
+.visual-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.visual-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}.visual-card svg{display:block;width:100%;height:auto;background:#f3f8fb}.visual-body{padding:13px}.visual-body h3{font-size:15px;margin:0 0 4px}.visual-body p{font-size:12px;color:var(--muted);margin:0}.sample{background:#f8fafc;border:1px dashed #d4dbe4;border-radius:14px;padding:14px;margin-top:12px;font-size:14px}.sample strong{display:block;margin-bottom:5px}.post-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px}.phone{max-width:360px;margin:auto;border:7px solid #182230;border-radius:28px;background:#fff;overflow:hidden;box-shadow:var(--shadow)}.phone-head{background:#229ed9;color:#fff;padding:13px 15px;font-weight:800}.phone-body{padding:14px;background:#eef2f5}.bubble{background:#fff;border-radius:14px;padding:11px;box-shadow:0 2px 8px rgba(0,0,0,.06);font-size:13px}.bubble-img{height:125px;border-radius:10px;margin-bottom:9px;background:linear-gradient(135deg,#dff4ff,#fff);display:grid;place-items:center;font-size:43px}.steps{display:grid;gap:9px}.step{display:flex;gap:10px}.num{width:29px;height:29px;border-radius:9px;background:#f1f5f9;display:grid;place-items:center;font-weight:900;flex:none}.step p{margin:0;font-size:13px}.step span{color:var(--muted)}
+.tip{border-left:4px solid var(--blue);background:#f7fbfd;padding:12px 13px;border-radius:0 12px 12px 0;font-size:13px;color:#344054}.money li,.safe li{margin:6px 0;font-size:13px}.money li::marker{color:var(--green)}.safe li::marker{color:var(--gold)}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.mini{border:1px solid var(--line);border-radius:12px;padding:10px;font-size:12px}.mini b{display:block}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:8px}
+@media(max-width:800px){.hero-grid,.layout,.post-layout{grid-template-columns:1fr}.hero-art{max-width:480px;margin:auto}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.visual-grid,.idea-grid{grid-template-columns:1fr}.card{padding:16px}.hero{padding:21px 17px}.stats{gap:7px}.stat b{font-size:17px}}
 </style>
 </head>
-<body>
-<div class="wrap">
-  <div class="sticky-nav"><nav class="nav">
-    <a href="#today">আজকের কাজ</a><a href="#plan">৭ দিনের পরিকল্পনা</a><a href="#post">পোস্ট কীভাবে লিখবেন</a><a href="#ideas">আইডিয়া</a><a href="#money">আয়</a><a href="#safety">নিরাপত্তা</a>
-  </nav></div>
-
-  <header class="hero">
-    <div class="hero-top"><div class="logo">🚀</div><div>
-      <h1>Telegram Growth Guide</h1>
-      <p>জটিল রুটিন নয়—যেদিন যেটা ভালো লাগে, সেদিন সেটাই কাজে লাগান। লক্ষ্য হলো ধীরে ধীরে ভালো কনটেন্ট, অডিয়েন্স ও বিশ্বাস তৈরি করা।</p>
-    </div></div>
-    <div class="stats">
-      <div class="stat"><span>আজকের অগ্রগতি</span><b id="pct">0%</b></div>
-      <div class="stat"><span>সম্পন্ন কাজ</span><b id="done">0/7</b></div>
-      <div class="stat"><span>শুরু করার নিয়ম</span><b>৫ মিনিট</b></div>
-    </div>
-  </header>
-
-  <div class="layout">
-    <main>
-      <section class="card" id="today">
-        <div class="row"><div><h2>✅ আজকের কাজ</h2><p class="intro">সবগুলো নিখুঁতভাবে করতে হবে না। অন্তত ১–২টি কাজ করলেও দিনটা নষ্ট নয়।</p></div><button class="secondary" onclick="resetTasks()">রিসেট</button></div>
-        <div id="tasks"></div>
-        <div class="progress-wrap"><div class="progress-label"><span>আজকের অগ্রগতি</span><b id="progressText">0%</b></div><div class="progress"><div class="bar" id="bar"></div></div></div>
-      </section>
-
-      <section class="card" id="plan">
-        <h2>📅 ৭ দিনের Flexible Content Plan</h2>
-        <p class="intro">এটা কোনো বাধ্যতামূলক টাইমটেবিল নয়। যে দিন যে বিষয় মাথায় আসে, সেখান থেকেই পোস্ট বেছে নিন।</p>
-        <div class="category-list">
-          <span class="category">AI Tools</span><span class="category">Useful Websites</span><span class="category">Telegram Bots</span><span class="category">Android Apps</span><span class="category">Free Resources</span><span class="category">Quick Tips</span><span class="category">Surprise Finds</span>
-        </div>
-        <div class="plan" id="days" style="margin-top:13px"></div>
-      </section>
-
-      <section class="card" id="post">
-        <h2>📝 একটি ভালো পোস্ট বানানোর সহজ ফর্মুলা</h2>
-        <p class="intro">প্রতিবার নতুন করে ভাবতে হবে না। শুধু এই ৫টি অংশ পূরণ করুন।</p>
-        <div class="steps">
-          <div class="step"><div class="num">১</div><div><b>আকর্ষণীয় শুরু</b><br><span class="intro">“এই টুলটা হয়তো আপনার কাজে লাগবে 👀” — প্রথম লাইনে আগ্রহ তৈরি করুন।</span></div></div>
-          <div class="step"><div class="num">২</div><div><b>এটা কী?</b><br><span class="intro">এক লাইনে Tool / Website / Bot / App-এর পরিচয় দিন।</span></div></div>
-          <div class="step"><div class="num">৩</div><div><b>কী কাজে লাগে?</b><br><span class="intro">বাস্তব ব্যবহার ১–৩টি ছোট পয়েন্টে বলুন।</span></div></div>
-          <div class="step"><div class="num">৪</div><div><b>লিংক</b><br><span class="intro">সম্ভব হলে অফিসিয়াল বা নির্ভরযোগ্য লিংক দিন।</span></div></div>
-          <div class="step"><div class="num">৫</div><div><b>ছোট CTA</b><br><span class="intro">“কাজে লাগলে Save করে রাখুন।” — এতটুকুই যথেষ্ট।</span></div></div>
-        </div>
-        <div class="example"><strong>✨ নমুনা পোস্ট</strong>🔥 আজকের Useful Find<br><br>📌 <b>নাম:</b> [Tool / Website / Bot / App]<br>🎯 <b>কাজ:</b> [এক লাইনে কী করে]<br>✨ <b>কেন useful:</b> [২–৩টি সুবিধা]<br>🔗 <b>Link:</b> [লিংক]<br><br>💬 কাজে লাগলে Save/Share করে রাখুন।</div>
-      </section>
-
-      <section class="card" id="ideas">
-        <h2>💡 যখন কিছু মাথায় আসবে না — এই আইডিয়াগুলো দেখুন</h2>
-        <p class="intro">এখান থেকে যেকোনো একটি নিয়ে নিজের ভাষায় ছোট পোস্ট বানিয়ে ফেলুন।</p>
-        <div class="ideas" id="ideaList"></div>
-      </section>
-    </main>
-
-    <aside>
-      <section class="card">
-        <h2>⏱️ ৫ মিনিটের নিয়ম</h2>
-        <div class="tip"><b>মুডের অপেক্ষা করবেন না।</b><br>শুধু ৫ মিনিটের জন্য শুরু করুন—একটা আইডিয়া খুঁজুন, একটা খসড়া লিখুন বা একটা পোস্ট দিন। শুরু হয়ে গেলে কাজ চালিয়ে যেতে ইচ্ছা করতেই পারে।</div>
-        <p class="intro" style="margin:12px 0 0">মনে রাখবেন: <b>Consistency &gt; Perfection</b></p>
-      </section>
-
-      <section class="card" id="money">
-        <h2>💰 ভবিষ্যতে আয় করার পথ</h2>
-        <p class="intro">শুরুতেই আয় নিয়ে চাপ নয়। আগে মানুষকে নিয়মিত কাজে লাগার মতো জিনিস দিন এবং বিশ্বাস তৈরি করুন।</p>
-        <ul class="money">
-          <li>Sponsored post</li><li>Affiliate link</li><li>নিজের Telegram bot / service</li><li>Digital product বা resource</li><li>Premium community</li>
-        </ul>
-      </section>
-
-      <section class="card" id="safety">
-        <h2>🛡️ পোস্ট করার আগে নিরাপত্তা</h2>
-        <ul class="safe">
-          <li>Cracked / pirated app এড়িয়ে চলুন</li><li>সন্দেহজনক APK শেয়ার করবেন না</li><li>Password, OTP বা login চাওয়া bot থেকে দূরে থাকুন</li><li>লিংক পোস্ট করার আগে যাচাই করুন</li><li>“নিশ্চিত আয়” বা ভুয়া earning claim করবেন না</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>🎯 সবচেয়ে গুরুত্বপূর্ণ কথা</h2>
-        <div class="tip">আপনার কাজ প্রতিদিন অনেক কিছু করা নয়। <b>একটি ভালো জিনিস খুঁজে বের করা → সহজভাবে বোঝানো → নিয়মিত পোস্ট করা।</b> ফল আসতে সময় লাগতে পারে, তাই ফল কম দেখালেও আবার ফিরে আসাটাই এই সিস্টেমের অংশ।</div>
-      </section>
-    </aside>
-  </div>
-  <div class="footer">আপনার কাজ সহজ করার জন্য তৈরি • অগ্রগতি এই ডিভাইসেই সংরক্ষিত থাকে</div>
-</div>
-
+<body><div class="wrap">
+<nav class="nav"><a href="#start">শুরু</a><a href="#today">আজকের কাজ</a><a href="#menu">Content Menu</a><a href="#ideas">120+ Ideas</a><a href="#visual">নমুনা ছবি</a><a href="#posts">Ready Posts</a><a href="#money">আয়</a><a href="#safety">Safety</a></nav>
+<header class="hero" id="start"><div class="hero-grid"><div><span class="hero-badge">🚀 PRACTICAL TELEGRAM CONTENT LAB</span><h1>আইডিয়া শেষ হবে না।<br>যেদিন যেটা ভালো লাগে, সেটাই পোস্ট করুন।</h1><p>এটা শুধু একটি রুটিন নয়—একটি বড় Idea Bank, visual sample, ready-to-use post structure এবং flexible content menu। আপনার কাজ: একটি ভালো জিনিস খুঁজে বের করা, সুন্দরভাবে বোঝানো, তারপর পোস্ট করা।</p></div><div class="hero-art"><svg viewBox="0 0 420 250" xmlns="http://www.w3.org/2000/svg"><rect width="420" height="250" rx="20" fill="#f2f9fc"/><circle cx="330" cy="55" r="34" fill="#dff3fb"/><rect x="42" y="36" width="270" height="165" rx="22" fill="#fff" stroke="#dce7ee"/><rect x="65" y="58" width="110" height="14" rx="7" fill="#229ed9"/><rect x="65" y="86" width="205" height="10" rx="5" fill="#e9eef3"/><rect x="65" y="108" width="170" height="10" rx="5" fill="#e9eef3"/><rect x="65" y="138" width="85" height="38" rx="10" fill="#eaf7fd"/><text x="82" y="162" font-size="18">🤖</text><rect x="160" y="138" width="85" height="38" rx="10" fill="#f2f4f7"/><text x="178" y="162" font-size="18">🌐</text><circle cx="335" cy="168" r="39" fill="#229ed9"/><text x="314" y="179" font-size="34">➜</text></svg></div></div>
+<div class="stats"><div class="stat"><span>আইডিয়া</span><b>120+</b></div><div class="stat"><span>নমুনা ভিজ্যুয়াল</span><b>12+</b></div><div class="stat"><span>Ready post format</span><b>10+</b></div><div class="stat"><span>শুরু করার সময়</span><b>5 মিনিট</b></div></div></header>
+<div class="layout"><main>
+<section class="card" id="today"><div class="row"><div><h2>✅ আজকের ছোট কাজ</h2><p class="intro">সবকিছু করতে হবে না। ১টি idea + ১টি draft + সম্ভব হলে ১টি post—এইটুকুই আজকের জয়।</p></div><button class="secondary" onclick="resetTasks()">রিসেট</button></div><div class="tasks" id="tasks"></div><div class="progress-label"><span>আজকের অগ্রগতি</span><b id="progressText">0%</b></div><div class="progress"><div class="bar" id="bar"></div></div></section>
+<section class="card" id="menu"><div class="section-title"><div class="section-icon">🧭</div><div><h2>Flexible Content Menu</h2><p class="intro">কোনো নির্দিষ্ট দিনে নির্দিষ্ট category বাধ্যতামূলক নয়। নিচ থেকে যেটা আপনার ভালো লাগে, সেটাই বেছে নিন।</p></div></div><div class="chips"><span class="chip">🤖 AI Tools</span><span class="chip">🌐 Websites</span><span class="chip">🤖 Telegram Bots</span><span class="chip">📱 Android Apps</span><span class="chip">🎁 Free Resources</span><span class="chip">⚡ Quick Tips</span><span class="chip">🔎 Hidden Gems</span><span class="chip">🧠 Prompts</span><span class="chip">🛠️ Mini Tutorials</span><span class="chip">📊 Comparisons</span></div><div class="plan"><div class="day"><div class="day-no">A</div><div><b>সময় কম?</b><span>একটি “আজকের Useful Find” পোস্ট করুন।</span></div></div><div class="day"><div class="day-no">B</div><div><b>মুড AI-এর?</b><span>একটি tool + কীভাবে ব্যবহার করবেন + একটি ছোট example।</span></div></div><div class="day"><div class="day-no">C</div><div><b>Telegram নিয়ে ঘাঁটাঘাঁটি করছেন?</b><span>একটি bot/feature/trick দেখান।</span></div></div><div class="day"><div class="day-no">D</div><div><b>কিছুই মাথায় নেই?</b><span>নিচের 120+ Idea Bank থেকে random একটি বেছে নিন।</span></div></div></div></section>
+<section class="card" id="ideas"><div class="row"><div><h2>💡 120+ Content Idea Bank</h2><p class="intro">এগুলো headline নয় শুধু—প্রতিটি থেকে ছোট, সহজ, কাজে লাগার মতো পোস্ট বানানো যাবে।</p></div><button onclick="randomIdea()">🎲 Random Idea</button></div><div class="filter" id="filters"></div><div class="idea-grid" id="ideaList"></div><div id="randomBox"></div></section>
+<section class="card" id="visual"><div class="section-title"><div class="section-icon">🖼️</div><div><h2>নমুনা Visual — শুধু লেখা নয়</h2><p class="intro">নিচের ছবিগুলো এই ওয়েবসাইটের ভেতরেই তৈরি করা sample visual। অর্থাৎ আলাদা image link-এর ওপর নির্ভর করছে না—আপনি পোস্ট কেমন দেখতে পারে, তা চোখে দেখে বুঝতে পারবেন।</p></div></div><div class="visual-grid">
+<div class="visual-card"><svg viewBox="0 0 700 390" xmlns="http://www.w3.org/2000/svg"><rect width="700" height="390" fill="#eaf7fd"/><circle cx="590" cy="85" r="75" fill="#cfeefa"/><rect x="70" y="65" width="560" height="265" rx="28" fill="#fff"/><rect x="110" y="105" width="220" height="25" rx="12" fill="#229ed9"/><text x="110" y="185" font-size="50">🤖</text><text x="185" y="176" font-size="31" font-weight="700" fill="#172033">AI TOOL OF THE DAY</text><text x="110" y="225" font-size="20" fill="#667085">একটি tool • একটি কাজ • একটি quick demo</text><rect x="110" y="260" width="170" height="42" rx="12" fill="#229ed9"/><text x="142" y="288" font-size="18" fill="#fff" font-weight="700">SAVE THIS</text></svg><div class="visual-body"><h3>① AI Tool পোস্ট</h3><p>Hero image + এক লাইনের benefit + “Save this” ধরনের CTA।</p></div></div>
+<div class="visual-card"><svg viewBox="0 0 700 390" xmlns="http://www.w3.org/2000/svg"><rect width="700" height="390" fill="#f4f6f8"/><rect x="90" y="35" width="520" height="320" rx="28" fill="#fff" stroke="#e0e6eb"/><rect x="90" y="35" width="520" height="68" rx="28" fill="#229ed9"/><circle cx="135" cy="69" r="18" fill="#fff"/><text x="170" y="78" font-size="23" fill="#fff" font-weight="700">Telegram Bot Pick</text><rect x="125" y="130" width="440" height="90" rx="18" fill="#eef8fc"/><text x="150" y="166" font-size="26">🤖</text><text x="200" y="162" font-size="20" font-weight="700" fill="#172033">Useful Bot</text><text x="200" y="190" font-size="16" fill="#667085">ফাইল / ছবি / ছোট automation</text><rect x="125" y="242" width="205" height="48" rx="14" fill="#172033"/><text x="170" y="273" font-size="18" fill="#fff" font-weight="700">TRY IT</text></svg><div class="visual-body"><h3>② Telegram Bot পোস্ট</h3><p>একটি clean card-এর মতো দেখান: bot কী করে, কার কাজে লাগবে, তারপর link।</p></div></div>
+<div class="visual-card"><svg viewBox="0 0 700 390" xmlns="http://www.w3.org/2000/svg"><rect width="700" height="390" fill="#fff8ed"/><rect x="60" y="55" width="580" height="270" rx="30" fill="#fff" stroke="#f1dfc2"/><text x="105" y="120" font-size="22" fill="#f59e0b" font-weight="800">FREE RESOURCE</text><text x="105" y="175" font-size="39" fill="#172033" font-weight="800">আজকের ফ্রি জিনিস 🎁</text><rect x="105" y="205" width="280" height="14" rx="7" fill="#e9edf2"/><rect x="105" y="232" width="410" height="14" rx="7" fill="#e9edf2"/><rect x="105" y="265" width="150" height="36" rx="12" fill="#f59e0b"/><text x="145" y="290" font-size="17" fill="#fff" font-weight="700">GET IT</text></svg><div class="visual-body"><h3>③ Free Resource পোস্ট</h3><p>Template, font, icon, wallpaper বা learning resource—একটি বিষয়কে hero করে দেখান।</p></div></div>
+<div class="visual-card"><svg viewBox="0 0 700 390" xmlns="http://www.w3.org/2000/svg"><rect width="700" height="390" fill="#f4f7ff"/><rect x="65" y="45" width="570" height="300" rx="28" fill="#fff"/><text x="105" y="100" font-size="22" fill="#087db6" font-weight="800">QUICK TIP</text><text x="105" y="150" font-size="34" fill="#172033" font-weight="800">৩ ধাপে কাজটা সহজ করুন</text><circle cx="125" cy="205" r="24" fill="#eaf7fd"/><text x="117" y="213" font-size="18">1</text><text x="165" y="212" font-size="19" fill="#475467">Problem</text><circle cx="125" cy="255" r="24" fill="#eaf7fd"/><text x="117" y="263" font-size="18">2</text><text x="165" y="262" font-size="19" fill="#475467">Tool</text><circle cx="125" cy="305" r="24" fill="#eaf7fd"/><text x="117" y="313" font-size="18">3</text><text x="165" y="312" font-size="19" fill="#475467">Result</text></svg><div class="visual-body"><h3>④ Quick Tip পোস্ট</h3><p>একটি সমস্যা → একটি tool → একটি ফলাফল। খুব ছোট পোস্টেও value তৈরি হয়।</p></div></div>
+</div></section>
+<section class="card" id="posts"><h2>📱 Ready-to-Use Post Examples</h2><p class="intro">নিচের structure কপি করে শুধু নাম, কাজ ও link বদলালেই পোস্ট তৈরি করা যায়।</p><div class="post-layout"><div><div class="phone"><div class="phone-head">Telegram Channel</div><div class="phone-body"><div class="bubble"><div class="bubble-img">🌐</div><b>🔥 আজকের Useful Find</b><br><br>এই website দিয়ে একটি বিরক্তিকর কাজ কয়েক মিনিটে করা যায়।<br><br>🎯 <b>কাজ:</b> [এক লাইনে কাজ]<br>✨ <b>কেন useful:</b><br>• সহজ<br>• দ্রুত<br>• Beginner-friendly<br><br>🔗 Link: [official link]<br><br>💾 কাজে লাগলে Save করে রাখুন।</div></div></div></div><div><div class="steps"><div class="step"><div class="num">1</div><p><b>Hook:</b> <span>“আপনি যদি এই সমস্যায় পড়েন, এটা দেখুন 👀”</span></p></div><div class="step"><div class="num">2</div><p><b>Visual:</b> <span>একটি clean screenshot/illustration বা result image।</span></p></div><div class="step"><div class="num">3</div><p><b>Value:</b> <span>কাজটি কীভাবে সহজ হয়, ২–৩ লাইনে বলুন।</span></p></div><div class="step"><div class="num">4</div><p><b>Link:</b> <span>সম্ভব হলে official/reliable source।</span></p></div><div class="step"><div class="num">5</div><p><b>CTA:</b> <span>“কাজে লাগলে Save/Share করুন।”</span></p></div></div><div class="sample"><strong>✨ Example: AI Tool</strong>🤖 আজকের AI Find<br><br>একটা prompt লিখে আপনি [কাজ] করতে পারবেন।<br><br>🎯 ভালো দিক: সহজ + দ্রুত + beginner-friendly<br>🔗 Link: [official link]<br><br>💬 আপনি এটা আগে ব্যবহার করেছেন?</div></div></div></section>
+<section class="card"><h2>📈 কোন ধরনের পোস্ট বেশি আকর্ষণীয় হতে পারে?</h2><p class="intro">কোনো format-ই guaranteed viral নয়। তবে মানুষের বাস্তব উপকার, পরিষ্কার presentation এবং save/share করার কারণ থাকলে পোস্টের value বাড়ে।</p><div class="mini-grid"><div class="mini"><b>🎁 “Free”</b>ফ্রি resource, template, font, tool</div><div class="mini"><b>⚡ “Save this”</b>পরে কাজে লাগবে এমন list/checklist</div><div class="mini"><b>😮 “এটা জানতেন?”</b>কম পরিচিত feature বা hidden gem</div><div class="mini"><b>🧩 “Problem → Solution”</b>একটি নির্দিষ্ট সমস্যার সহজ সমাধান</div><div class="mini"><b>🏆 “Top 3”</b>এক কাজের জন্য ৩টি ভালো option</div><div class="mini"><b>🔍 “Tested”</b>আপনি নিজে দেখে/ব্যবহার করে কী পেলেন</div></div></section>
+</main><aside>
+<section class="card"><h2>⏱️ ৫ মিনিটের নিয়ম</h2><div class="tip"><b>মুডের অপেক্ষা নয়।</b><br>৫ মিনিট timer দিন। একটি idea খুঁজুন, দুই লাইন লিখুন, অথবা draft save করুন। ছোট কাজও momentum তৈরি করে।</div></section>
+<section class="card" id="money"><h2>💰 আয় করার পথ</h2><p class="intro">আগে value ও trust, পরে monetization।</p><ul class="money"><li>Sponsored post</li><li>Affiliate links</li><li>নিজের bot / service</li><li>Digital product / resource pack</li><li>Premium community</li></ul></section>
+<section class="card" id="safety"><h2>🛡️ Safety Checklist</h2><ul class="safe"><li>Cracked/pirated app এড়িয়ে চলুন</li><li>সন্দেহজনক APK বা file শেয়ার করবেন না</li><li>Password/OTP/login চাওয়া bot থেকে দূরে থাকুন</li><li>লিংক publish-এর আগে যাচাই করুন</li><li>ভুয়া “নিশ্চিত আয়” claim করবেন না</li></ul></section>
+<section class="card"><h2>🎯 Golden Rule</h2><div class="tip">আপনার channel-এর identity হতে পারে: <b>“প্রতিদিন কাজে লাগার মতো নতুন কিছু খুঁজে দেওয়া।”</b><br><br>AI, Bot, Website, App—এগুলো আলাদা আলাদা channel নয়; একই promise-এর আলাদা দরজা।</div></section>
+<section class="card"><h2>🧠 মনে রাখবেন</h2><p class="intro">কোনো দিন AI ভালো লাগলে AI। পরের দিন Telegram নিয়ে ঘাঁটাঘাঁটি করতে ইচ্ছে করলে Bot। আর কিছুই ভালো না লাগলে Idea Bank থেকে random।</p><button style="width:100%" onclick="document.getElementById('ideas').scrollIntoView()">💡 Idea Bank খুলুন</button></section>
+</aside></div><div class="footer">Telegram Content Lab • আপনার অগ্রগতি এই ডিভাইসেই সংরক্ষিত থাকে</div></div>
 <script>
-const tasks=[
- ['research','১টি কাজে লাগার মতো content idea খুঁজুন','খুঁজুন'],
- ['draft','সেই idea দিয়ে একটি ছোট draft লিখুন','লিখুন'],
- ['publish','সম্ভব হলে অন্তত ১টি পোস্ট publish করুন','পোস্ট'],
- ['engage','কয়েকটি relevant channel/group-এ স্বাভাবিকভাবে engage করুন','Engage'],
- ['reply','নিজের audience-এর message/comment-এর reply দিন','Community'],
- ['review','আজকের views/reach দেখে ১টি learning লিখুন','Review'],
- ['next','পরের পোস্টের জন্য ১টি idea save করে রাখুন','Plan']
+const tasks=[['idea','১টি useful idea খুঁজুন','Find'],['draft','সেই idea দিয়ে ৪–৮ লাইনের draft লিখুন','Write'],['visual','একটি simple visual/screenshot যোগ করুন','Visual'],['publish','সম্ভব হলে ১টি পোস্ট publish করুন','Post'],['engage','কিছু relevant channel/group-এ স্বাভাবিকভাবে engage করুন','Engage'],['review','views/reaction দেখে ১টি learning লিখুন','Review'],['next','পরের পোস্টের জন্য ১টি idea save করুন','Plan']];
+const data=[
+['AI','একটি নতুন beginner-friendly AI tool পরিচয় করিয়ে দিন','🤖'],['AI','AI দিয়ে ছবি বানানোর ৩টি simple prompt idea','🤖'],['AI','AI দিয়ে PDF/নোট থেকে summary করার পদ্ধতি','🤖'],['AI','AI দিয়ে CV/resume উন্নত করার quick tip','🤖'],['AI','AI tool A বনাম B—কোন কাজের জন্য কোনটি?','🤖'],['AI','একটি underrated AI writing tool','🤖'],['AI','AI দিয়ে student-এর ৫ মিনিটের কাজ','🤖'],['AI','একটি image prompt + কী result আশা করা যায়','🤖'],['AI','AI দিয়ে email/message লেখার shortcut','🤖'],['AI','AI-এর privacy নিয়ে একটি সহজ tip','🤖'],
+['Website','আজকের useful website','🌐'],['Website','ছবি resize/compress করার সহজ site','🌐'],['Website','PDF merge/split করার tool','🌐'],['Website','Image থেকে text নেওয়ার site','🌐'],['Website','ফাইল format convert করার site','🌐'],['Website','ফ্রি icon খোঁজার resource','🌐'],['Website','ফ্রি font খোঁজার website','🌐'],['Website','ফ্রি wallpaper resource','🌐'],['Website','Studentদের কাজে লাগে এমন site','🌐'],['Website','একটি privacy-friendly website','🌐'],['Website','একটি obscure কিন্তু useful search tool','🌐'],['Website','একটি browser-based mini tool','🌐'],['Website','৩টি website একসাথে: “save this list”','🌐'],['Website','একটি website যা repetitive কাজ কমায়','🌐'],['Website','একটি নতুন web app test করে result জানান','🌐'],
+['Telegram','কম পরিচিত useful Telegram bot','✈️'],['Telegram','Telegram-এর একটি hidden/less-known feature','✈️'],['Telegram','Channel post সুন্দর করার ছোট trick','✈️'],['Telegram','Telegram file/document management tip','✈️'],['Telegram','Telegram privacy/security checklist','✈️'],['Telegram','একটি bot দিয়ে ছোট automation idea','✈️'],['Telegram','Telegram channel admin-এর সময় বাঁচানোর tip','✈️'],['Telegram','Telegram search-এর useful trick','✈️'],['Telegram','Saved Messages ব্যবহারের smart idea','✈️'],['Telegram','Channel engagement বাড়ানোর simple idea','✈️'],['Telegram','Telegram mini app নিয়ে beginner guide','✈️'],['Telegram','একটি bot review: ভালো-মন্দ','✈️'],['Telegram','নতুন Telegram feature নিয়ে সহজ ব্যাখ্যা','✈️'],['Telegram','“৩টি bot যা save করে রাখবেন”','✈️'],['Telegram','একটি bot কীভাবে নিরাপদে ব্যবহার করবেন','✈️'],
+['Android','একটি underrated Android app','📱'],['Android','Android storage খালি করার quick tip','📱'],['Android','Battery বাঁচানোর সহজ setting','📱'],['Android','Phone privacy-এর ৩টি setting','📱'],['Android','ফ্রি productivity app','📱'],['Android','ফ্রি note-taking app','📱'],['Android','ছবি edit করার lightweight app','📱'],['Android','Studentদের জন্য useful app','📱'],['Android','File management-এর ভালো app','📱'],['Android','Android-এর hidden feature','📱'],['Android','একটি app বনাম আরেকটি—কোনটা সহজ?','📱'],['Android','ফোন slow হলে ৫টি basic check','📱'],['Android','নোটিফিকেশন কমানোর smart setup','📱'],['Android','ফ্রি scanner/document app','📱'],['Android','একটি open-source Android app','📱'],
+['Free','ফ্রি template resource','🎁'],['Free','ফ্রি icon pack/resource','🎁'],['Free','ফ্রি font collection','🎁'],['Free','ফ্রি wallpaper collection','🎁'],['Free','ফ্রি learning resource','🎁'],['Free','ফ্রি design mockup','🎁'],['Free','ফ্রি presentation template','🎁'],['Free','ফ্রি resume/CV template','🎁'],['Free','ফ্রি color palette resource','🎁'],['Free','ফ্রি image resource','🎁'],['Free','ফ্রি audio/sound resource','🎁'],['Free','ফ্রি checklist/template pack','🎁'],['Free','একটি useful open-source resource','🎁'],['Free','৩টি free resources for students','🎁'],['Free','আজকের “save this” free resource','🎁'],
+['Tip','“আপনি এটা জানতেন?” ধরনের quick fact','⚡'],['Tip','একটি কাজ ৩০ সেকেন্ডে করার trick','⚡'],['Tip','Problem → Tool → Result পোস্ট','⚡'],['Tip','৩টি useful tools for one task','⚡'],['Tip','৫টি জিনিস যা save করে রাখবেন','⚡'],['Tip','একটি common ভুল + সহজ সমাধান','⚡'],['Tip','একটি keyboard shortcut','⚡'],['Tip','একটি browser shortcut','⚡'],['Tip','একটি file management tip','⚡'],['Tip','একটি productivity trick','⚡'],['Tip','একটি study trick','⚡'],['Tip','একটি privacy tip','⚡'],['Tip','একটি content creation trick','⚡'],['Tip','একটি “before/after” mini tutorial','⚡'],['Tip','একটি 1-minute tutorial','⚡'],
+['Gem','আজকের Hidden Gem','🔎'],['Gem','একটি website দেখে নিজের reaction শেয়ার করুন','🔎'],['Gem','একটি tool যা আপনি আগে জানতেন না','🔎'],['Gem','“এটা bookmark করুন” পোস্ট','🔎'],['Gem','কম পরিচিত কিন্তু useful app','🔎'],['Gem','একটি surprising browser feature','🔎'],['Gem','একটি ছোট automation discovery','🔎'],['Gem','একটি free tool যার premium-looking result','🔎'],['Gem','একটি niche student resource','🔎'],['Gem','একটি creator resource যা সময় বাঁচায়','🔎'],
+['Compare','Tool A vs Tool B','📊'],['Compare','Free vs paid option—কী পার্থক্য?','📊'],['Compare','৩টি apps: কোন কাজের জন্য কোনটি?','📊'],['Compare','৩টি websites: speed/ease/features','📊'],['Compare','একই কাজের ২টি Telegram bot comparison','📊'],['Compare','Beginner-এর জন্য সবচেয়ে সহজ option কোনটি?','📊'],['Compare','একটি tool-এর ভালো-মন্দ','📊'],['Compare','আমার pick + কেন','📊'],
+['Tutorial','স্ক্রিনশটসহ ৩ ধাপে একটি কাজ','🛠️'],['Tutorial','একটি website ব্যবহার করার mini guide','🛠️'],['Tutorial','একটি Telegram bot শুরু করার guide','🛠️'],['Tutorial','একটি Android setting খুঁজে বের করার guide','🛠️'],['Tutorial','AI prompt ব্যবহার করার ৩ ধাপ','🛠️'],['Tutorial','একটি file convert করার guide','🛠️'],['Tutorial','একটি channel post format করার guide','🛠️'],['Tutorial','একটি simple automation setup idea','🛠️'],['Tutorial','নতুন user-এর জন্য “শুরু এখান থেকে” guide','🛠️'],['Tutorial','একটি tool-এর result কীভাবে improve করবেন','🛠️'],
+['Series','আজকের Find #01','📚'],['Series','১ সপ্তাহে ৭টি useful tool series','📚'],['Series','“এক মিনিটে এক tool” series','📚'],['Series','“Friday Freebie” series','📚'],['Series','“Bot of the Week” series','📚'],['Series','“Website you should know” series','📚'],['Series','“Hidden Android” series','📚'],['Series','“AI Prompt of the Day” series','📚'],['Series','সপ্তাহের সেরা ৩টি discovery','📚'],['Series','এই সপ্তাহে যা সত্যিই কাজে লেগেছে','📚']
 ];
-const days=[
- ['আজকের সেরা জিনিস','AI, Website, Bot বা App—যেটা সবচেয়ে ভালো লাগে সেটি খুঁজে পোস্ট করুন।'],
- ['Problem Solver','কোনো ছোট সমস্যা + তার সহজ সমাধান শেয়ার করুন।'],
- ['Telegram Special','একটি useful bot, feature বা ছোট Telegram trick দেখান।'],
- ['Free Stuff','ফ্রি template, font, icon, wallpaper, image বা resource দিন।'],
- ['App / Website Pick','একটি ভালো Android app বা website বেছে সহজভাবে পরিচয় করিয়ে দিন।'],
- ['Surprise Find','আজ এমন কিছু খুঁজুন যেটা দেখে আপনি নিজেই বলবেন—“এটা তো আগে জানতাম না!”'],
- ['Best of the Week','সপ্তাহের সেরা ৩টি পোস্ট/জিনিস একসাথে সাজিয়ে দিন।']
-];
-const ideas=[
- 'ফ্রি AI tool যা লেখার কাজ সহজ করে','আজকের useful website','কম পরিচিত Telegram bot','স্টুডেন্টদের জন্য Android app','ফ্রি PDF বা learning resource','৩০ সেকেন্ডের Android tip','Privacy-friendly useful tool','ফ্রি design resource','AI দিয়ে image prompt idea','ফ্রি productivity website','Telegram-এর useful feature','ফাইল convert করার সহজ website','নতুন browser/tool find','ফ্রি icon বা font resource','সময় বাঁচানোর automation idea','Beginner-friendly AI tool','ফ্রি learning platform','নিরাপদ open-source app','Telegram channel management tip','মোবাইল storage বাঁচানোর tip','ছবি থেকে text নেওয়ার tool','ভিডিও/অডিও utility website','ফ্রি resume/CV resource','একটি useful Google feature','AI prompt of the day','ফ্রি note-taking tool','Telegram bot দিয়ে ছোট automation','Android battery-saving tip','একটি underrated website','আজকের Surprise Find'
-];
-function getState(){try{return JSON.parse(localStorage.tgTasks||'{}')}catch(e){return {}}}
-function load(){
- const s=getState();
- document.getElementById('tasks').innerHTML=tasks.map((t,i)=>`<div class="task"><input id="t${i}" type="checkbox" ${s[i]?'checked':''} onchange="toggle(${i})"><label for="t${i}"><span class="badge">${t[2]}</span><br>${t[1]}</label></div>`).join('');
- document.getElementById('days').innerHTML=days.map((d,i)=>`<div class="day"><div class="day-no">${i+1}</div><div><b>${d[0]}</b><span>${d[1]}</span></div></div>`).join('');
- document.getElementById('ideaList').innerHTML=ideas.map((x,i)=>`<div class="idea">${i+1}. ${x}</div>`).join('');
- update();
-}
-function toggle(i){let s=getState();s[i]=document.getElementById('t'+i).checked;localStorage.tgTasks=JSON.stringify(s);update()}
-function update(){let n=tasks.filter((_,i)=>document.getElementById('t'+i)?.checked).length,p=Math.round(n/tasks.length*100);document.getElementById('done').textContent=n+'/'+tasks.length;document.getElementById('pct').textContent=p+'%';document.getElementById('progressText').textContent=p+'%';document.getElementById('bar').style.width=p+'%'}
-function resetTasks(){localStorage.removeItem('tgTasks');load()}
-load();
-</script>
-</body>
-</html>
+const cats=['সব','AI','Website','Telegram','Android','Free','Tip','Gem','Compare','Tutorial','Series'];let current='সব';
+function getState(){try{return JSON.parse(localStorage.tgTasks2||'{}')}catch(e){return {}}}
+function loadTasks(){const s=getState();document.getElementById('tasks').innerHTML=tasks.map((t,i)=>`<div class="task"><input id="t${i}" type="checkbox" ${s[i]?'checked':''} onchange="toggle(${i})"><label for="t${i}"><span class="badge">${t[2]}</span><br>${t[1]}</label></div>`).join('');update()}
+function toggle(i){let s=getState();s[i]=document.getElementById('t'+i).checked;localStorage.tgTasks2=JSON.stringify(s);update()}
+function update(){let n=tasks.filter((_,i)=>document.getElementById('t'+i)?.checked).length,p=Math.round(n/tasks.length*100);document.getElementById('progressText').textContent=p+'%';document.getElementById('bar').style.width=p+'%'}
+function resetTasks(){localStorage.removeItem('tgTasks2');loadTasks()}
+function renderFilters(){document.getElementById('filters').innerHTML=cats.map(c=>`<button class="${c===current?'active':''}" onclick="setCat('${c}')">${c}</button>`).join('')}
+function setCat(c){current=c;renderFilters();renderIdeas()}
+function renderIdeas(){const arr=current==='সব'?data:data.filter(x=>x[0]===current);document.getElementById('ideaList').innerHTML=arr.map((x,i)=>`<div class="idea"><b>${x[2]} ${x[1]}</b><small>এই idea থেকে: Hook → কী → কেন useful → Link → CTA</small><span class="tag">${x[0]}</span></div>`).join('')}
+function randomIdea(){const x=data[Math.floor(Math.random()*data.length)];document.getElementById('randomBox').innerHTML=`<div class="sample"><strong>🎲 আজকের Random Idea</strong>${x[2]} <b>${x[1]}</b><br><br><span style="color:#667085">এখন শুধু এই formula ব্যবহার করুন: <b>Hook → ১টি visual → কী কাজে লাগে → ১–৩টি benefit → link → Save/Share CTA</b></span></div>`;document.getElementById('randomBox').scrollIntoView({behavior:'smooth',block:'center'})}
+loadTasks();renderFilters();renderIdeas();
+</script></body></html>
