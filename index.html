@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Telegram Growth Dashboard</title>
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#667085;--accent:#229ed9;--line:#e7eaf0;--ok:#16a34a;--shadow:0 8px 30px rgba(16,24,40,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;line-height:1.55}.wrap{max-width:1050px;margin:auto;padding:22px 16px 50px}.hero{background:linear-gradient(135deg,#0d8bd0,#229ed9);color:white;border-radius:24px;padding:28px 24px;box-shadow:var(--shadow);margin-bottom:18px}.hero h1{margin:0 0 6px;font-size:clamp(26px,5vw,40px)}.hero p{margin:0;opacity:.92}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}.stat{background:rgba(255,255,255,.15);padding:12px;border-radius:14px}.stat b{display:block;font-size:24px}.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:var(--shadow);margin-bottom:18px}.card h2{font-size:20px;margin:0 0 14px}.task{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}.task:last-child{border:0}.task input{width:20px;height:20px;margin-top:3px;accent-color:var(--accent)}.task label{cursor:pointer;flex:1}.task input:checked+label{text-decoration:line-through;color:var(--muted)}.tag{display:inline-block;background:#eef8fd;color:#0875a8;padding:4px 9px;border-radius:999px;font-size:12px;font-weight:700;margin:2px 4px 2px 0}.progress{height:10px;background:#e9edf3;border-radius:999px;overflow:hidden}.bar{height:100%;width:0;background:var(--accent);transition:.25s}.ideas{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.idea{border:1px solid var(--line);border-radius:13px;padding:11px;font-size:14px}.template{background:#0f172a;color:#e5e7eb;border-radius:14px;padding:15px;white-space:pre-wrap;font-size:14px}.quote{border-left:4px solid var(--accent);padding-left:13px;color:#475467}.small{font-size:13px;color:var(--muted)}button{border:0;background:var(--accent);color:white;border-radius:11px;padding:9px 13px;font-weight:700;cursor:pointer}button.secondary{background:#eef2f6;color:#344054}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.footer{text-align:center;color:var(--muted);font-size:12px;margin-top:20px}@media(max-width:760px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}.ideas{grid-template-columns:1fr}.card{padding:16px}.hero{padding:23px 18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero"><h1>🚀 Telegram Growth Dashboard</h1><p>প্রতিদিন ছোট ছোট কাজ → নিয়মিত কনটেন্ট → অডিয়েন্স → ভবিষ্যতে Monetization</p><div class="stats"><div class="stat"><span>আজকের অগ্রগতি</span><b id="pct">0%</b></div><div class="stat"><span>সম্পন্ন কাজ</span><b id="done">0/7</b></div><div class="stat"><span>Rule</span><b>5 min</b></div></div></section>
+<div class="grid">
+<main>
+<section class="card"><div class="row"><h2>✅ আজকের কাজ</h2><button class="secondary" onclick="resetTasks()">Reset</button></div><div id="tasks"></div><div style="margin-top:15px"><div class="progress"><div class="bar" id="bar"></div></div></div></section>
+<section class="card"><h2>📅 Flexible 7-Day Content Plan</h2><p class="small">দিনের সঙ্গে category বাঁধা নেই। যেটা ভালো লাগে/যেটা পাওয়া যায়, সেটাই পোস্ট করুন।</p><div><span class="tag">AI Tools</span><span class="tag">Useful Websites</span><span class="tag">Telegram Bots</span><span class="tag">Android Apps</span><span class="tag">Free Resources</span><span class="tag">Quick Tips</span><span class="tag">Surprise Finds</span></div><div id="days" style="margin-top:12px"></div></section>
+<section class="card"><h2>📝 Universal Post Template</h2><div class="template">🔥 আজকের Useful Find
+
+📌 নাম: [Tool / Website / Bot / App]
+🎯 কী কাজে লাগে: [১ লাইনে]
+✨ কেন useful: [২–৩টি পয়েন্ট]
+🔗 Link: [লিংক]
+
+💬 আপনার কাজে লাগবে মনে হলে Save/Share করে রাখুন।</div></section>
+<section class="card"><h2>💡 30 Content Ideas</h2><div class="ideas" id="ideas"></div></section>
+</main>
+<aside>
+<section class="card"><h2>⏱️ 5-Minute Rule</h2><p class="quote">মুড না থাকলেও শুধু ৫ মিনিট কাজ শুরু করুন। ৫ মিনিটে একটি idea খুঁজুন, লিখুন বা পোস্ট করুন।</p><p class="small">Consistency > perfection.</p></section>
+<section class="card"><h2>💰 Future Monetization</h2><ul><li>Sponsored posts</li><li>Affiliate links</li><li>Digital products/resources</li><li>Premium community</li><li>নিজের tool/service</li></ul><p class="small">আগে trust ও audience তৈরি করুন, পরে monetization.</p></section>
+<section class="card"><h2>🛡️ Safety Checklist</h2><ul><li>Cracked/pirated app এড়ান</li><li>সন্দেহজনক APK শেয়ার করবেন না</li><li>Password/OTP চাওয়া bot এড়ান</li><li>লিংক পোস্টের আগে যাচাই করুন</li><li>Misleading income claim করবেন না</li></ul></section>
+</aside></div>
+<div class="footer">Built for consistent Telegram growth • Progress is saved on this device</div>
+</div>
+<script>
+const tasks=[['research','১টি useful content idea খুঁজুন','Research'],['draft','১টি পোস্ট draft করুন','Create'],['publish','কমপক্ষে ১টি পোস্ট publish করুন','Publish'],['engage','৫–১০টি relevant channel/group-এ genuine engagement করুন','Engage'],['reply','নিজের audience-এর message/comment-এর reply দিন','Community'],['review','আজকের reach/views দেখে ১টি learning লিখুন','Review'],['next','আগামী পোস্টের জন্য ১টি idea save করুন','Plan']];
+const cats=['AI Tools','Useful Websites','Telegram Bots','Android Apps','Free Resources','Quick Tips','Surprise Finds'];
+const ideas=['ফ্রি AI tool যা লেখার কাজ সহজ করে','আজকের useful website','কম পরিচিত Telegram bot','স্টুডেন্টদের জন্য Android app','ফ্রি PDF/resource collection','৩০ সেকেন্ডের Android tip','Privacy-friendly useful tool','ফ্রি design resource','AI দিয়ে image prompt idea','ফ্রি productivity website','Telegram-এর hidden feature','ফাইল convert করার সহজ website','নতুন browser/tool find','ফ্রি icon/font resource','একটি সময় বাঁচানো automation idea','Beginner-friendly AI tool','ফ্রি learning platform','একটি নিরাপদ open-source app','Telegram channel management tip','মোবাইল storage বাঁচানোর tip','স্ক্রিনশট থেকে text নেওয়ার tool','ভিডিও/অডিও utility website','ফ্রি resume/CV resource','একটি surprising Google feature','AI prompt of the day','ফ্রি note-taking tool','Telegram bot দিয়ে ছোট automation','Android battery-saving tip','একটি underrated website','আজকের Surprise Find'];
+function load(){let s=JSON.parse(localStorage.tgTasks||'{}');document.getElementById('tasks').innerHTML=tasks.map((t,i)=>`<div class="task"><input id="t${i}" type="checkbox" ${s[i]?'checked':''} onchange="toggle(${i})"><label for="t${i}"><span class="tag">${t[2]}</span><br>${t[1]}</label></div>`).join('');document.getElementById('days').innerHTML=Array.from({length:7},(_,i)=>`<div style="padding:10px 0;border-bottom:1px solid var(--line)"><b>দিন ${i+1}</b> — যেকোনো ১টি category: <span id="c${i}" class="tag">${cats[i]}</span></div>`).join('');document.getElementById('ideas').innerHTML=ideas.map(x=>`<div class="idea">${x}</div>`).join('');update()}
+function toggle(i){let s=JSON.parse(localStorage.tgTasks||'{}');s[i]=document.getElementById('t'+i).checked;localStorage.tgTasks=JSON.stringify(s);update()}
+function update(){let n=tasks.filter((_,i)=>document.getElementById('t'+i)?.checked).length,p=Math.round(n/tasks.length*100);document.getElementById('done').textContent=n+'/'+tasks.length;document.getElementById('pct').textContent=p+'%';document.getElementById('bar').style.width=p+'%'}
+function resetTasks(){localStorage.removeItem('tgTasks');load()}
+load();
+</script>
+</body></html>
